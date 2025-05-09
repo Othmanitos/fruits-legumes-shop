@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marché Frais - Fruits & Légumes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Marché Frais Logo" class="logo">
+            <h1>Marché Frais</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#products">Produits</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Des fruits et légumes frais livrés chez vous</h2>
+                <p>Découvrez notre sélection de produits bio et locaux</p>
+                <a href="#products" class="btn">Voir nos produits</a>
+            </div>
+        </section>
+
+        <section id="products" class="products-section">
+            <h2>Nos Produits</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="fruit">Fruits</button>
+                <button class="filter-btn" data-filter="legume">Légumes</button>
+            </div>
+            <div class="products-grid" id="products-grid">
+                <!-- Les produits seront ajoutés dynamiquement par JavaScript -->
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>À propos de nous</h2>
+            <div class="about-content">
+                <p>Marché Frais est une entreprise familiale qui fournit des fruits et légumes frais depuis 1995. Nous travaillons directement avec les producteurs locaux pour vous offrir les meilleurs produits au juste prix.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-leaf"></i>
+                        <h3>100% Bio</h3>
+                        <p>Produits cultivés sans pesticides</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-truck"></i>
+                        <h3>Livraison Rapide</h3>
+                        <p>Livré chez vous en 24h</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-euro-sign"></i>
+                        <h3>Prix Juste</h3>
+                        <p>Directement du producteur</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contactez-nous</h2>
+            <div class="contact-container">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Nos coordonnées</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Rue du Marché, 75000 Paris</p>
+                    <p><i class="fas fa-phone"></i> 01 23 45 67 89</p>
+                    <p><i class="fas fa-envelope"></i> contact@marchefrais.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart">&times;</span>
+            <h2>Votre Panier</h2>
+            <div class="cart-items" id="cart-items">
+                <!-- Les articles du panier seront ajoutés dynamiquement -->
+            </div>
+            <div class="cart-total">
+                <p>Total: <span id="cart-total">0.00</span> €</p>
+            </div>
+            <button class="btn checkout-btn">Passer la commande</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Marché Frais</h3>
+                <p>Votre épicerie en ligne de fruits et légumes frais.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#products">Produits</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit" class="btn">S'abonner</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Marché Frais. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
